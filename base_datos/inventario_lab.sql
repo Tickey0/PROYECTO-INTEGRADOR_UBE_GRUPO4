@@ -94,3 +94,10 @@ INSERT IGNORE INTO equipos (codigo, nombre, id_categoria, estado, ubicacion, fec
     ('EQ-015', 'Switch TP-Link de 24 puertos', 5, 'Operativo', 'Laboratorio 1', '2024-01-12', 150.00, 1),
     ('EQ-016', 'Router Mikrotik hAP ac2', 5, 'Operativo', 'Laboratorio 2', '2025-02-05', 95.00, 1),
     ('EQ-017', 'Access Point Ubiquiti UniFi', 5, 'Operativo', 'Laboratorio 3', '2025-02-05', 130.00, 1);
+
+CREATE TABLE IF NOT EXISTS accesos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(30) NOT NULL,
+    accion VARCHAR(20) NOT NULL,
+    fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
